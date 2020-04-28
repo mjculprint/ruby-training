@@ -73,6 +73,8 @@ RSpec.describe 'inheritance' do
 
   it "can't invoke other methods using super" do
     george = GreatDane.new('George')
-    expect { george.growl }.to raise_error(__)
+    expect do
+      george.growl
+    end.to raise_error(__)
   end
 end

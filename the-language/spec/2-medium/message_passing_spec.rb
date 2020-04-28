@@ -122,7 +122,9 @@ RSpec.describe 'message passing' do
   it 'now lies when you ask if it respond_to?' do
     catcher = AllMessageCatcher.new
 
-    expect { catcher.any_method }.not_to raise_error
+    expect do
+      catcher.any_method
+    end.not_to raise_error
     expect(catcher.respond_to?(:any_method)).to eq(__)
   end
 
@@ -146,7 +148,9 @@ RSpec.describe 'message passing' do
   it 'behaves normally for non-foo methods' do
     catcher = WellBehavedFooCatcher.new
 
-    expect { catcher.normal_undefined_method }.to raise_error(__)
+    expect do
+      catcher.normal_undefined_method
+    end.to raise_error(__)
   end
 
   # (note: just reopening class from above)
