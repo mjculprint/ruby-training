@@ -17,7 +17,7 @@ RSpec.describe 'quadrilateral types' do
 
   it 'is a quadrilateral when no angles are equal' do
     expect(quadrilateral(90, 80, 70, 120)).to eq([:quadrilateral])
-    expect(quadrilateral(10, 10, 300, 40)).to eq([:quadrilateral])
+    expect(quadrilateral(10, 20, 300, 30)).to eq([:quadrilateral])
     expect(quadrilateral(95, 5, 100, 160)).to eq([:quadrilateral])
   end
 end
