@@ -14,7 +14,7 @@ RSpec.describe 'polygon angle calculation' do
     end
 
     it 'calculates the interior angle of a regular heptagon' do
-      expect(internal_angle(7)).to eq(128)
+      expect(internal_angle(7)).to eq(128.57)
     end
 
     it 'calculates the interior angle of a regular octagon' do
@@ -40,7 +40,7 @@ RSpec.describe 'polygon angle calculation' do
     end
 
     it 'calculates the exterior angle of a regular heptagon' do
-      expect(external_angle(7)).to eq(51)
+      expect(external_angle(7)).to eq(51.43)
     end
 
     it 'calculates the exterior angle of a regular octagon' do
