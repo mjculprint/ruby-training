@@ -1,20 +1,19 @@
 # frozen_string_literal: true
 
 class Bottles
+  def sing
+    verses(99, 0)
+  end
 
-    def sing
-     verses(99, 0)
-    end
+  def verses(starting, ending)
+    starting.downto(ending).map {|i| verse(i)}.join("\n") + "\n"
+  end
 
-    def verses(starting, ending)
-    starting.downto(ending).map {|i| verse(i)}.join("\n")
-    end
-
-    def verse(number)
+  def verse(number)
     "#{line_1(number)}#{line_2(number)}"
-    end
+  end
 
-    def line_1(number)
+  def line_1(number)
     if number == 0
       "No more bottles of beer on the wall, no more bottles of beer.\n"
     elsif number == 1
@@ -22,9 +21,9 @@ class Bottles
     else
       "#{number} bottles of beer on the wall, #{number} bottles of beer.\n"
     end
- end
+  end
 
-    def line_2(number)
+  def line_2(number)
     if number == 0
       "Go to the store and buy some more, 99 bottles of beer on the wall.\n"
     elsif number == 2
