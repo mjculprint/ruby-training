@@ -17,7 +17,7 @@ RSpec.describe 'message passing' do
   it 'can call methods directly' do
     mc = MessageCatcher.new
 
-    expect(mc.caught?).to eq(__)
+    expect(mc.caught?).to eq()
   end
 
   it 'can invoke a method using send and the method name as a symbol' do
